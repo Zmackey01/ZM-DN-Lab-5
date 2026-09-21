@@ -13,14 +13,12 @@ def ugly_number(n):
   >>> ugly_number(8)
   True
   """
-  if n%2==1:
-    return True
-  if n%3==1:
-    return True
-  if n%5==1:
-    return True
-  else:
-   return False
+  if n<= 0:
+    return False
+  for factor in [2, 3, 5]:
+    while n % factor ==0:
+      n=n // factor
+  return n == 1
     
   
   
